@@ -1,13 +1,22 @@
-import requests, json <br>
+<!DOCTYPE html>
+<html>
+  <body>
+    <pre>
+<code>
+import requests, json
 
-key = "AIzaSyCCB_jnhnwJJWPhHWeoWw7yAZd1N5nANFI" <br>
+key = "YOUR_API_KEY_HERE"
 
-prompt = "Give only code for largest element in array. Respond inside ```python ...  ```." <br>
+prompt = "Give only code for largest element in array. Respond inside ```python ... ```."
 
-body = {"contents":[{"parts":[{"text":prompt}]}]} <br>
+body = {"contents":[{"parts":[{"text":prompt}]}]}
 
-url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={key}" <br>
+url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={key}"
 
-res = requests.post(url, json=body).json() <br>
+res = requests.post(url, json=body).json()
 
-print(res["candidates"][0]["content"]["parts"][0]["text"]) <br>
+print(res["candidates"][0]["content"]["parts"][0]["text"])
+</code>
+    </pre>
+  </body>
+</html>
